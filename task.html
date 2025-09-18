@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Ticket Booking</title>
+  <link rel="stylesheet" href="task.css" />
+</head>
+<body>
+  <div class="page" id="headerSection">
+    <div id="typing-text">
+      <h1 id="animated-head"></h1>
+      <p>Have Fun!!!</p>
+    </div>
+
+    <!-- <div class="adds"id="adsSection">
+      <div class="add">Ad Slot 1</div>
+      <div class="add">Ad Slot 2</div>
+    </div> -->
+
+    <div class="blocks">
+      <div class="tabs">
+        <p onclick="filterMovies('all')">All</p>
+        <p onclick="filterMovies('new-releases')">New Releases</p>
+        <p onclick="filterMovies('upcoming-movies')">Upcoming Movies</p>
+        <input type="text" id="searchInput" placeholder="Search Movie..." onkeyup="searchMovie()" />
+      </div>
+
+      <div class="movies-container" id="moviesContainer"></div>
+
+      <div id="bookingView" style="display: none;">
+  <div class="media-wrapper" id="mediaWrapper"></div>
+  <div id="showtimeContainer"></div>
+  <div id="seatSection" style="display: none;">
+    <div class="seat-section-wrapper">
+      <p id="pricingTag"></p>
+      <div class="seat-grid" id="seatGrid"></div>
+    </div>
+  </div>
+  <div class="booking-box">
+    <label>Name: <input type="text" id="userName" /></label>
+    <div class="booking-actions">
+      <button onclick="confirmBooking()">Confirm Booking</button>
+      <button onclick="goBack()">Back</button>
+    </div>
+  </div>
+  <div class="ticket-display" id="ticketDisplay" style="display: none;"></div>
+</div>
+
+    </div>
+  </div>
+
+  
+  <audio id="celebrationSound" src="https://assets.mixkit.co/sfx/preview/mixkit-achievement-bell-600.mp3"></audio>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script src="task.js"></script>
+</body>
+</html>
